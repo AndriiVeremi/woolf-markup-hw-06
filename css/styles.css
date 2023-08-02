@@ -141,6 +141,12 @@ button {
   display: inline-block;
 }
 
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 120px;
+  }
+}
+
 @media screen and (min-width: 1158px) {
   .logo {
     margin-right: 76px;
@@ -208,33 +214,26 @@ button {
   }
 }
 
-.address-list {
-  display: flex;
-  gap: 40px;
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
   .address-list {
+    display: flex;
     flex-direction: column;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    gap: 2px;
   }
 }
 
-.contact-link {
-  display: inline-block;
-  line-height: 1.5;
-  letter-spacing: 0.32px;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  color: var(--slate);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+@media screen and (min-width: 1158px) {
+  .address-list {
+    display: flex;
+    gap: 40px;
+  }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
   .contact-link {
     color: var(--slate);
-    padding-top: 16px;
-  padding-bottom: 16px;
-    font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
@@ -243,14 +242,17 @@ button {
 }
 
 @media screen and (min-width: 1158px) {
-  .header-contacts__link {
-    font-size: 16px;
-    line-height: 1.5;
-    display: inline-block;
-  }
-}
-
-
+  .contact-link {
+   display: inline-block;
+   line-height: 1.5;
+   font-size: 16px;
+   letter-spacing: 0.32px;
+   padding-top: 24px;
+   padding-bottom: 24px;
+   color: var(--slate);
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+ }
 
 .contact-link:hover,
 .contact-link:focus {
@@ -391,10 +393,6 @@ button {
   }
 }
 
-/* .info-item {
-  width: 396px;
-} */
-
 @media screen and (min-width: 768px) {
   .info-item {
     width: calc((100% - 24px) / 2);
@@ -523,6 +521,7 @@ button {
 @media screen and (min-width: 1158px) {
   .team-list {
     gap: 24px;
+    flex-wrap: nowrap;
   }
 }
 
@@ -531,18 +530,6 @@ button {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
-}
-
-@media screen and (min-width: 768px) {
-  .team-item {
-    width: calc((100% - 24px) / 2);
-  }
-}
-
-@media screen and (min-width: 1158px) {
-  .team-item {
-    width: calc((100% - 72px) / 4);
-  }
 }
 
 .team-description {
@@ -610,12 +597,6 @@ button {
     padding: 120px 0;
   }
 }
-
-/* @media screen and (min-width: 768px) and (max-width: 1157px) {
-  .container.customers {
-    width: 552px;
-  }
-} */
 
 .customers-list {
   display: flex;
@@ -919,9 +900,19 @@ button {
 
 .catalog-list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   gap: 24px;
-  margin-bottom: 72px;
+  margin-bottom: 48px
+  }
+
+@media screen and (min-width: 768px) {
+  .catalog-list {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 72px;
+  }
 }
 
 .catalog-list .button {
@@ -932,11 +923,28 @@ button {
   letter-spacing: 0.04em;
   border: 1px solid var(--cornflower);
   border-radius: 4px;
-  padding: 12px 24px;
+  padding: 8px 16px;
   cursor: pointer;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .catalog-list .button {
+    color: var(--iris);
+    background-color: var(--cloud);
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    border: 1px solid var(--cornflower);
+    border-radius: 4px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .catalog-list .button:hover,
@@ -954,6 +962,14 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 48px 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+}
 }
 
 .gallery-link {
@@ -1107,15 +1123,15 @@ button {
   margin-bottom: 40px;
 }
 
-/* .address-item:last-child {
+.mobile-address-item:last-child {
   margin-top: 40px;
 }
 
 @media screen and (min-width: 1158px) {
-  .address-item:last-child {
+  .mobile-address-item:last-child {
     margin-top: 0;
   }
-} */
+}
 
 .address-link-tel {
   font-style: normal;
