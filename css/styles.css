@@ -218,9 +218,7 @@ button {
   .address-list {
     display: flex;
     flex-direction: column;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    gap: 2px;
+    gap: 12px;
   }
 }
 
@@ -479,6 +477,7 @@ button {
 
 @media screen and (min-width: 1158px) {
   .works {
+    display: block;
     padding-bottom: 120px;
   }
 
@@ -598,6 +597,12 @@ button {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .customers .container  {
+    max-width: 584px;
+  }
+}
+
 .customers-list {
   display: flex;
   justify-content: center;
@@ -675,10 +680,10 @@ button {
 
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .footer .container {
-    width: 552px;
-    text-align: start;
+    max-width: 584px;
     display: flex;
     flex-wrap: wrap;
+    text-align: start;
   }
 }
 
@@ -686,6 +691,7 @@ button {
   .footer .container {
     display: flex;
     align-items: baseline;
+    text-align: start;
   }
 }
 
@@ -1161,11 +1167,17 @@ button {
 .address-link-tel {
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 25px;
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--iris);
+}
+
+@media screen and (min-width: 428px) {
+  .address-link-tel {    
+    font-size: 36px;
+  }
 }
 
 .address-link-mail {
