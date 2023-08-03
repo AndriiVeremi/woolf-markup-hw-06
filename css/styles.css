@@ -243,16 +243,16 @@ button {
 
 @media screen and (min-width: 1158px) {
   .contact-link {
-   display: inline-block;
-   line-height: 1.5;
-   font-size: 16px;
-   letter-spacing: 0.32px;
-   padding-top: 24px;
-   padding-bottom: 24px;
-   color: var(--slate);
-   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
- }
- }
+    display: inline-block;
+    line-height: 1.5;
+    font-size: 16px;
+    letter-spacing: 0.32px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    color: var(--slate);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
 
 .contact-link:hover,
 .contact-link:focus {
@@ -904,7 +904,7 @@ button {
   justify-content: flex-start;
   gap: 24px;
   margin-bottom: 48px
-  }
+}
 
 @media screen and (min-width: 768px) {
   .catalog-list {
@@ -958,18 +958,43 @@ button {
 
 /* Галерея */
 
+.gallery {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .gallery {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+}
+
 .gallery-list {
   display: flex;
   flex-wrap: wrap;
   gap: 48px 24px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
   .gallery-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 48px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
 }
+
+@media screen and (max-width: 767px) {
+  .gallery-item:not(:last-child) {
+    margin-bottom: 48px;
+  }
 }
 
 .gallery-link {
